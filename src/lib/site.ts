@@ -9,7 +9,9 @@ export const siteConfig = {
   tagline: 'Building apps that solve real problems.',
   description:
     'I design practical mobile apps that simplify everyday life through thoughtful design. Budgeting, receipts, car maintenance and more.',
-  url: 'https://hilalalhinai.com',
+  // Canonical origin. Must match the domain that actually serves the site —
+  // the apex 308-redirects here, so www is canonical.
+  url: 'https://www.hilalalhinai.com',
   locale: 'en_US',
   author: {
     name: 'Hilal',
