@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import type { App } from '@/lib/apps';
 import { PhoneMockup } from './PhoneMockup';
@@ -20,7 +21,16 @@ export function AppScreenshots({ app }: { app: App }) {
           transition={{ duration: 0.6, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
           className="w-[62%] shrink-0 snap-center sm:w-[38%] lg:w-[30%]"
         >
-          <PhoneMockup gradient={app.gradient} label={app.icon} />
+          <PhoneMockup gradient={app.gradient} label={app.icon}>
+            <Image
+              src={shot.src}
+              alt={shot.alt}
+              fill
+              sizes="(max-width: 640px) 62vw, (max-width: 1024px) 38vw, 30vw"
+              className="object-cover"
+              priority={i === 0}
+            />
+          </PhoneMockup>
           <figcaption className="mt-3 text-center text-xs text-muted">{shot.alt}</figcaption>
         </motion.figure>
       ))}
