@@ -8,7 +8,7 @@ export const siteConfig = {
   title: 'Hilal — Independent App Developer',
   tagline: 'Building apps that solve real problems.',
   description:
-    'I design practical mobile apps that simplify everyday life through thoughtful design. Budgeting, receipts, car maintenance and more.',
+    'I design practical mobile apps that simplify everyday life through thoughtful design. Maker of Mira, a mindful money and mood tracker for iPhone and iPad.',
   // Canonical origin. Must match the domain that actually serves the site —
   // the apex 308-redirects here, so www is canonical.
   url: 'https://www.hilalalhinai.com',
@@ -25,11 +25,12 @@ export const siteConfig = {
     'iOS app developer',
     'Android app developer',
     'Flutter developer',
-    'productivity apps',
-    'budget app',
-    'receipt scanner app',
-    'car maintenance app',
+    'budgeting app',
+    'mood tracker app',
     'personal finance app',
+    'mindful spending',
+    'emotional spending',
+    'Mira app',
     'indie developer',
     'building in public',
     'Hilal Al Hinai',
@@ -62,10 +63,7 @@ export const footerSections = [
     title: 'Product',
     links: [
       { href: '/apps', label: 'All Apps' },
-      { href: '/apps/budget', label: 'Budget App' },
-      { href: '/apps/receipt-vault', label: 'Receipt Vault' },
-      { href: '/apps/car-maintenance', label: 'Car Maintenance' },
-      { href: '/apps/crm', label: 'CRM' },
+      { href: '/apps/mira', label: 'Mira: Money & Mood' },
     ],
   },
   {

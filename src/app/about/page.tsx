@@ -56,15 +56,15 @@ const roles = [
 const timeline = [
   {
     year: 'Now',
-    title: 'Four apps, one roadmap',
+    title: 'Mira is live',
     detail:
-      'Shipping Budget, Receipt Vault, Car Maintenance and CRM while writing about the process.',
+      'Growing Mira, listening to what people actually use, and writing about the process as it happens.',
   },
   {
-    year: '2025',
-    title: 'First apps in the store',
+    year: '2026',
+    title: 'First app in the store',
     detail:
-      'Budget and Receipt Vault launched, with real users, real feedback and a lot of rewriting.',
+      'Mira: Money & Mood launched on iPhone and iPad, with real users, real feedback and a lot of rewriting.',
   },
   {
     year: '2024',
@@ -118,22 +118,20 @@ export default function AboutPage() {
               ship and support every app myself.
             </p>
             <p>
-              It started the way most of these things do: with problems I couldn&apos;t solve
-              properly using anything already on the App Store. I wanted to know where my money went
-              without maintaining a spreadsheet. I wanted to find a receipt from eleven months ago
-              in under ten seconds. I wanted a service history for my car that a buyer would
-              actually believe. Each of those became an app.
+              It started the way most of these things do: with a problem I couldn&apos;t solve
+              properly using anything already on the App Store. Every budgeting app I tried showed
+              me where my money went. None of them could tell me why. The spreadsheet knew about the
+              purchase; it knew nothing about the bad afternoon behind it.
+            </p>
+            <p>
+              That became Mira — a budgeting app that tracks the feeling alongside the figure, so the
+              pattern driving your spending finally becomes visible.
             </p>
             <p>
               Working alone shapes what gets built. There is no roadmap handed down from anyone, and
               no pressure to add features that demo well but nobody uses. It also means every
               shortcut becomes my problem later, so I take fewer of them than I would on someone
               else&apos;s deadline.
-            </p>
-            <p>
-              The apps share a spine — the same storage layer, the same design system, the same
-              principles about speed and privacy. That is what makes it possible for one person to
-              maintain four products without any of them rotting.
             </p>
             <p>
               I work in public. I write about what I ship, what breaks, and what the numbers

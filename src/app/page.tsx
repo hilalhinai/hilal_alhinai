@@ -27,13 +27,12 @@ export default function HomePage() {
       {/* Short intro that feeds the About page */}
       <Section className="border-t border-border">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-20">
-          <SectionHeading eyebrow="About" title="One developer. Four apps. No shortcuts." />
+          <SectionHeading eyebrow="About" title="One developer. No shortcuts." />
           <Reveal delay={0.1} className="space-y-5 text-lg leading-relaxed text-muted">
             <p>
-              I build mobile apps on my own — design, code, support, the lot. Every app started as
-              something I needed myself and couldn&apos;t find done properly: a budget I&apos;d
-              actually keep up with, a receipt I could find eleven months later, a service history I
-              could trust.
+              I build mobile apps on my own — design, code, support, the lot. Mira started as
+              something I needed myself and couldn&apos;t find done properly: a way to see not just
+              where my money went, but what I was feeling when it went there.
             </p>
             <p>
               Working alone forces a kind of honesty. There&apos;s no room for features nobody asked

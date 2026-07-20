@@ -11,12 +11,12 @@ import { BreadcrumbSchema } from '@/components/seo/JsonLd';
 export const metadata: Metadata = {
   title: 'Apps',
   description:
-    'Mobile apps for budgeting, receipt scanning, car maintenance and small-business CRM. Built independently for iOS and Android.',
+    'Mira: Money & Mood — a mindful budgeting and mood tracker for iPhone and iPad, built independently.',
   alternates: { canonical: '/apps' },
   openGraph: {
     title: 'Apps by Hilal — practical mobile apps',
     description:
-      'Budget, Receipt Vault, Car Maintenance and CRM — practical apps that solve everyday problems.',
+      'Mira: Money & Mood — practical apps that solve everyday problems.',
     url: '/apps',
   },
 };

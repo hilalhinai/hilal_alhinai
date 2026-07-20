@@ -22,8 +22,7 @@ export default function PrivacyPage() {
       <h2>Who this applies to</h2>
       <p>
         This policy covers {siteConfig.url.replace('https://', '')} and the mobile applications
-        published by {siteConfig.author.fullName}, including Budget, Receipt Vault, Car Maintenance and
-        CRM.
+        published by {siteConfig.author.fullName}, including Mira: Money &amp; Mood.
       </p>
 
       <h2>What the website collects</h2>

@@ -63,8 +63,8 @@ export function Hero() {
 
             <motion.dl {...item(0.32)} className="mt-12 flex flex-wrap gap-x-10 gap-y-5">
               {[
-                { value: '4', label: 'Apps built' },
-                { value: '2', label: 'Live in stores' },
+                { value: '1', label: 'App on the App Store' },
+                { value: 'iOS', label: 'iPhone & iPad' },
                 { value: '100%', label: 'Independent' },
               ].map((stat) => (
                 <div key={stat.label}>

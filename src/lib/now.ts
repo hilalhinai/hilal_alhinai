@@ -17,17 +17,17 @@ export const nowSections: NowSection[] = [
     icon: 'Rocket',
     items: [
       {
-        title: 'Car Maintenance — public beta',
+        title: 'Mira — post-launch',
         detail:
-          'Polishing reminder logic and the service-history PDF export before the App Store release.',
+          'Watching how people actually use the emotion tagging, and cutting anything that adds friction to a daily check-in.',
       },
       {
-        title: 'Receipt Vault 2.0',
-        detail: 'Rebuilding extraction to be faster offline, with Arabic receipt support.',
+        title: 'Weekly reflections',
+        detail: 'Making the weekly summary genuinely worth opening rather than another notification.',
       },
       {
-        title: 'CRM — private alpha',
-        detail: 'Designing the pipeline view and testing follow-up drafts with ten real businesses.',
+        title: 'Debt planner polish',
+        detail: 'Refining the Avalanche and Snowball comparison so the trade-off is obvious at a glance.',
       },
     ],
   },
@@ -36,8 +36,8 @@ export const nowSections: NowSection[] = [
     icon: 'Target',
     items: [
       {
-        title: 'Four apps live',
-        detail: 'Get Car Maintenance and CRM shipped alongside Budget and Receipt Vault.',
+        title: 'First 100 active users',
+        detail: 'Not downloads — people who open Mira in a given week and get something out of it.',
       },
       {
         title: 'Write weekly',
@@ -56,7 +56,7 @@ export const nowSections: NowSection[] = [
       {
         title: 'Shared design system',
         detail:
-          'Pulling the components all four apps duplicate into one package so a fix lands everywhere at once.',
+          'Extracting Mira’s components into a reusable package, so the next app starts further along.',
       },
       {
         title: 'Offline sync',
