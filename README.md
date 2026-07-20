@@ -126,11 +126,32 @@ Drop these into `public/` — the site works without them, but they finish the p
 
 Three things are intentionally stubbed so you can plug in your own providers:
 
-| What              | Where                                          | To do                                        |
-| ----------------- | ---------------------------------------------- | -------------------------------------------- |
-| Newsletter signup | `src/components/home/NewsletterForm.tsx`        | Replace the mocked submit with your provider  |
-| Contact form      | `src/components/contact/ContactForm.tsx`        | Currently opens a `mailto:`; swap for an API route |
-| Analytics         | `src/components/layout/CookieConsent.tsx`       | Initialise your script only after consent     |
+| What         | Where                                     | To do                                              |
+| ------------ | ----------------------------------------- | -------------------------------------------------- |
+| Contact form | `src/components/contact/ContactForm.tsx`  | Currently opens a `mailto:`; swap for an API route |
+| Analytics    | `src/components/layout/CookieConsent.tsx` | Initialise your script only after consent          |
+
+---
+
+## Newsletter (beehiiv)
+
+The signup form posts to `/api/subscribe`, a server route that forwards to
+beehiiv with your API key attached. The key never reaches the browser.
+
+Set two environment variables — see `.env.example`:
+
+```
+BEEHIIV_API_KEY=...
+BEEHIIV_PUBLICATION_ID=pub_...
+```
+
+Locally, put them in `.env.local` (gitignored). In production, add them under
+**Vercel → Project → Settings → Environment Variables**, then redeploy —
+environment variables are read at build and runtime, so an existing deployment
+won't pick them up on its own.
+
+If the variables are missing the form fails gracefully with "Newsletter is not
+configured yet" rather than crashing.
 
 ---
 

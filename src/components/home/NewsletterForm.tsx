@@ -8,23 +8,43 @@ import { cn } from '@/lib/utils';
 type State = 'idle' | 'loading' | 'done' | 'error';
 
 /**
- * Newsletter capture. Swap the mocked submit for your provider's endpoint
- * (ConvertKit, Buttondown, Resend Audiences…) — the UI states already exist.
+ * Newsletter capture, backed by beehiiv.
+ *
+ * Posts to /api/subscribe rather than calling beehiiv directly, so the API
+ * key stays on the server. See src/app/api/subscribe/route.ts.
  */
 export function NewsletterForm({ compact = false }: { compact?: boolean }) {
   const [email, setEmail] = useState('');
   const [state, setState] = useState<State>('idle');
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!email.includes('@')) return setState('error');
+    if (!email.includes('@')) {
+      setErrorMessage('Please enter a valid email address.');
+      return setState('error');
+    }
+
     setState('loading');
+    setErrorMessage(null);
+
     try {
-      // TODO: replace with a real subscribe endpoint.
-      await new Promise((r) => setTimeout(r, 700));
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      const data = (await response.json()) as { ok: boolean; message?: string };
+
+      if (!response.ok || !data.ok) {
+        setErrorMessage(data.message ?? 'Something went wrong. Please try again.');
+        return setState('error');
+      }
+
       setState('done');
       setEmail('');
     } catch {
+      setErrorMessage('Network error. Please try again.');
       setState('error');
     }
   }
@@ -90,8 +110,10 @@ export function NewsletterForm({ compact = false }: { compact?: boolean }) {
         )}
       >
         {state === 'error'
-          ? 'Please enter a valid email address.'
-          : 'No spam. Unsubscribe any time.'}
+          ? (errorMessage ?? 'Please enter a valid email address.')
+          : state === 'done'
+            ? 'Check your inbox to confirm.'
+            : 'No spam. Unsubscribe any time.'}
       </p>
     </form>
   );
