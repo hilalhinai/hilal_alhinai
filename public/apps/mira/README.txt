@@ -1,6 +1,14 @@
-Mira — app page screenshots
-===========================
+Mira — app page assets
+======================
 
+App icon
+--------
+  icon.png   — square, 1024 x 1024, no rounded corners needed
+               (the site rounds them). This is the same artwork
+               you upload to App Store Connect.
+
+Screenshots
+-----------
 Drop three portrait PNGs here, named exactly:
 
   screen-1.png

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import * as Icons from 'lucide-react';
@@ -15,6 +16,7 @@ import { StoreBadge } from '@/components/apps/StoreBadge';
 import { AppScreenshots } from '@/components/apps/AppScreenshots';
 import { Faq } from '@/components/apps/Faq';
 import { PhoneMockup } from '@/components/apps/PhoneMockup';
+import { AppIcon } from '@/components/apps/AppIcon';
 import { Newsletter } from '@/components/home/Newsletter';
 import { BreadcrumbSchema, FaqSchema, SoftwareAppSchema } from '@/components/seo/JsonLd';
 
@@ -90,12 +92,13 @@ export default async function AppPage({ params }: Params) {
           <div className="mt-10 grid items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
             <Reveal>
               <div className="flex items-center gap-4">
-                <span
-                  className="grid h-16 w-16 place-items-center rounded-3xl border border-border bg-card text-3xl shadow-soft"
-                  aria-hidden
-                >
-                  {app.icon}
-                </span>
+                <AppIcon
+                  icon={app.icon}
+                  name={app.name}
+                  className="h-16 w-16"
+                  rounded="rounded-3xl"
+                  textSize="text-3xl"
+                />
                 <div className="flex flex-wrap gap-2">
                   <Badge variant={app.status === 'live' ? 'success' : 'default'}>
                     {statusLabels[app.status]}
@@ -130,7 +133,18 @@ export default async function AppPage({ params }: Params) {
             </Reveal>
 
             <Reveal delay={0.12} className="mx-auto w-full max-w-[16rem]">
-              <PhoneMockup gradient={app.gradient} label={app.icon} />
+              <PhoneMockup gradient={app.gradient} label={app.icon}>
+                {app.screenshots[0] && (
+                  <Image
+                    src={app.screenshots[0].src}
+                    alt={app.screenshots[0].alt}
+                    fill
+                    sizes="256px"
+                    className="object-cover"
+                    priority
+                  />
+                )}
+              </PhoneMockup>
             </Reveal>
           </div>
         </Container>

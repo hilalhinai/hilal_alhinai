@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { getFeaturedApps } from '@/lib/apps';
@@ -91,7 +92,18 @@ export function Hero() {
                 transition={{ duration: 7 + i, repeat: Infinity, ease: 'easeInOut', delay: i * 0.5 }}
                 style={{ marginBottom: i === 1 ? '2.5rem' : 0 }}
               >
-                <PhoneMockup gradient={app.gradient} label={app.icon} />
+                <PhoneMockup gradient={app.gradient} label={app.icon}>
+                  {app.screenshots[0] && (
+                    <Image
+                      src={app.screenshots[0].src}
+                      alt=""
+                      fill
+                      sizes="(max-width: 640px) 30vw, 200px"
+                      className="object-cover"
+                      priority={i === 0}
+                    />
+                  )}
+                </PhoneMockup>
               </motion.div>
             ))}
           </motion.div>

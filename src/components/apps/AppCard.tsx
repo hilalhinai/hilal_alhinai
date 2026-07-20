@@ -4,6 +4,7 @@ import { statusLabels, platformLabels, type App } from '@/lib/apps';
 import { Badge } from '@/components/ui/Badge';
 import { Card } from '@/components/ui/Card';
 import { Reveal } from '@/components/ui/Reveal';
+import { AppIcon } from '@/components/apps/AppIcon';
 import { cn } from '@/lib/utils';
 
 /**
@@ -33,12 +34,7 @@ export function AppCard({
 
         <div className={cn('relative flex h-full flex-col p-7', variant === 'feature' && 'sm:p-8')}>
           <div className="flex items-start justify-between gap-4">
-            <div
-              className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-border bg-background text-2xl shadow-soft"
-              aria-hidden
-            >
-              {app.icon}
-            </div>
+            <AppIcon icon={app.icon} name={app.name} className="h-14 w-14" />
             <ArrowUpRight
               size={20}
               className="mt-1 shrink-0 text-muted transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground"

@@ -69,7 +69,7 @@ export const apps: App[] = [
       'Every purchase carries a feeling — stress, boredom, celebration, guilt. Mira lets you tag the emotion behind your spending, then shows you the patterns a bank statement can never reveal. It is budgeting with self-awareness built in, designed to help you change gently, without shame.',
     status: 'live',
     category: 'Finance',
-    icon: '💜',
+    icon: '/apps/mira/icon.png',
     gradient: 'from-violet-500/20 via-fuchsia-500/10 to-transparent',
     featured: true,
     releaseDate: '2026-01-01',
