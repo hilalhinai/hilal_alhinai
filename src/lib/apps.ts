@@ -73,8 +73,9 @@ export const apps: App[] = [
     releaseDate: '2025-09-01',
     platforms: ['ios', 'android'],
     links: {
-      appStore: 'https://apps.apple.com/app/id000000000',
-      playStore: 'https://play.google.com/store/apps/details?id=app.hilal.budget',
+      // Add once published:
+      // appStore: 'https://apps.apple.com/app/idXXXXXXXXXX',
+      // playStore: 'https://play.google.com/store/apps/details?id=app.hilal.budget',
       website: '/apps/budget',
       support: '/contact',
     },
@@ -166,8 +167,9 @@ export const apps: App[] = [
     releaseDate: '2025-11-15',
     platforms: ['ios', 'android'],
     links: {
-      appStore: 'https://apps.apple.com/app/id000000001',
-      playStore: 'https://play.google.com/store/apps/details?id=app.hilal.receiptvault',
+      // Add once published:
+      // appStore: 'https://apps.apple.com/app/idXXXXXXXXXX',
+      // playStore: 'https://play.google.com/store/apps/details?id=app.hilal.receiptvault',
       website: '/apps/receipt-vault',
       support: '/contact',
     },
@@ -254,7 +256,8 @@ export const apps: App[] = [
     releaseDate: '2026-03-01',
     platforms: ['ios', 'android'],
     links: {
-      appStore: 'https://apps.apple.com/app/id000000002',
+      // Add once published:
+      // appStore: 'https://apps.apple.com/app/idXXXXXXXXXX',
       website: '/apps/car-maintenance',
       support: '/contact',
     },
