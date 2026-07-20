@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------ */
+/*  Design tokens                                                      */
+/*  Values are space-separated RGB channels so Tailwind can apply      */
+/*  opacity modifiers (e.g. text-foreground/60).                       */
+/* ------------------------------------------------------------------ */
+@layer base {
+  :root {
+    --background: 255 255 255; /* #FFFFFF */
+    --foreground: 17 17 17; /* #111111 */
+    --muted: 102 102 102; /* #666666 */
+    --card: 248 248 248; /* #F8F8F8 */
+    --border: 234 234 234; /* #EAEAEA */
+    --accent: 37 99 235; /* #2563EB */
+    --accent-foreground: 255 255 255;
+  }
+
+  .dark {
+    --background: 10 10 10;
+    --foreground: 245 245 245;
+    --muted: 150 150 150;
+    --card: 22 22 22;
+    --border: 38 38 38;
+    --accent: 96 145 255;
+    --accent-foreground: 10 10 10;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Visible, accessible focus ring (WCAG 2.4.7) */
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-background;
+  }
+
+  ::selection {
+    @apply bg-accent/20;
+  }
+
+  /* Respect users who prefer less motion (WCAG 2.3.3) */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Frosted-glass surface used by the sticky nav and overlays */
+  .glass {
+    @apply bg-background/70 backdrop-blur-xl backdrop-saturate-150;
+  }
+
+  /* Soft radial glow behind hero content */
+  .hero-glow {
+    background:
+      radial-gradient(60% 50% at 50% 0%, rgb(var(--accent) / 0.10), transparent 70%),
+      radial-gradient(40% 40% at 80% 20%, rgb(var(--accent) / 0.06), transparent 70%);
+  }
+
+  /* Subtle grid used as a background texture */
+  .grid-texture {
+    background-image:
+      linear-gradient(to right, rgb(var(--border) / 0.6) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(var(--border) / 0.6) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 40%, transparent 100%);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Hide scrollbar on horizontal scrollers while keeping them scrollable */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

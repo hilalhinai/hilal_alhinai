@@ -1,0 +1,13 @@
+{
+  "name": "Hilal — Independent AI App Developer",
+  "short_name": "Hilal",
+  "description": "Building AI-powered apps that solve real problems.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#111111",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
