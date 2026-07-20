@@ -136,9 +136,9 @@ export const apps: App[] = [
       },
     ],
     screenshots: [
-      { src: '/apps/mira/screen-1.png', alt: 'Logging an expense and tagging the emotion behind it' },
-      { src: '/apps/mira/screen-2.png', alt: 'Spending broken down by emotion' },
-      { src: '/apps/mira/screen-3.png', alt: 'Monthly budget and savings goals at a glance' },
+      { src: '/apps/mira/screen-1.png', alt: 'Mira insights screen showing spending patterns and trends over the month' },
+      { src: '/apps/mira/screen-2.png', alt: 'Mira feelings screen showing spending broken down by the emotion behind each purchase' },
+      { src: '/apps/mira/screen-3.png', alt: 'Mira goals screen showing savings targets and progress at a glance' },
     ],
     faq: [
       {
