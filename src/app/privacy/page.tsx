@@ -95,13 +95,6 @@ export default function PrivacyPage() {
         Questions about privacy? <Link href="/contact">Get in touch</Link> or email{' '}
         <a href={`mailto:${siteConfig.author.email}`}>{siteConfig.author.email}</a>.
       </p>
-
-      <p>
-        <em>
-          This document is provided for transparency and is not legal advice. Review it with a
-          qualified professional before relying on it for compliance purposes.
-        </em>
-      </p>
     </LegalPage>
   );
 }

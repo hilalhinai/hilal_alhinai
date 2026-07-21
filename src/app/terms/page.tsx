@@ -93,13 +93,6 @@ export default function TermsPage() {
         Questions about these terms? <Link href="/contact">Contact me</Link> or email{' '}
         <a href={`mailto:${siteConfig.author.email}`}>{siteConfig.author.email}</a>.
       </p>
-
-      <p>
-        <em>
-          This document is a starting template, not legal advice. Have a qualified lawyer review it
-          before relying on it.
-        </em>
-      </p>
     </LegalPage>
   );
 }

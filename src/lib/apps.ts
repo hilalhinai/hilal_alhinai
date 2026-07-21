@@ -163,6 +163,105 @@ export const apps: App[] = [
       },
     ],
   },
+  {
+    slug: 'ritmio',
+    name: 'Ritmio — Habit Tracker',
+    tagline: 'Build habits that stick.',
+    description:
+      'A habit tracker built around consistency rather than perfection — flexible schedules, gentle reminders, and stats that show real progress.',
+    longDescription:
+      'Most habit trackers punish you for missing a day. Ritmio is built for how habits actually form: set the routines you care about, check them off on a schedule that fits your week, and watch streaks and statistics build over time. Start small, stay consistent, and let the progress become visible.',
+    status: 'live',
+    category: 'Productivity',
+    icon: '/apps/ritmio/icon.png',
+    gradient: 'from-emerald-500/20 via-teal-500/10 to-transparent',
+    featured: true,
+    releaseDate: '2026-07-21',
+    platforms: ['ios', 'ipados'],
+    pricing: 'Free · In-App Purchases',
+    links: {
+      appStore: 'https://apps.apple.com/app/ritmio-habit-tracker/id6787430767',
+      website: '/apps/ritmio',
+      support: '/contact',
+    },
+    benefits: [
+      {
+        title: 'Consistency over perfection',
+        description:
+          'Flexible schedules mean a habit can be three days a week, weekdays only, or every few days — without breaking a streak you never agreed to.',
+      },
+      {
+        title: 'Progress you can see',
+        description:
+          'Completion trends, rankings and insights turn a month of small check-ins into evidence that something is changing.',
+      },
+      {
+        title: 'Momentum that lasts',
+        description:
+          'XP, levels and achievements give the early weeks a reward, which is exactly when most habits are abandoned.',
+      },
+    ],
+    features: [
+      {
+        title: 'Simple daily tracking',
+        description: 'Tap to complete and build a streak. The whole interaction takes a second.',
+        icon: 'CircleCheck',
+      },
+      {
+        title: 'Flexible schedules',
+        description:
+          'Daily, weekdays, weekends, specific days, or every few days — habits that fit a real week.',
+        icon: 'CalendarRange',
+      },
+      {
+        title: 'Custom categories',
+        description: 'Create your own with a name, icon and colour, so the app matches your life.',
+        icon: 'Shapes',
+      },
+      {
+        title: 'Smart reminders',
+        description: 'Gentle nudges at the times you choose, not a stream of notifications.',
+        icon: 'BellRing',
+      },
+      {
+        title: 'Beautiful statistics',
+        description: 'Completion trends, rankings and insights that show where consistency is real.',
+        icon: 'ChartLine',
+      },
+      {
+        title: 'Home-screen widget',
+        description: "See today's progress at a glance, and sync across devices — offline included.",
+        icon: 'LayoutGrid',
+      },
+    ],
+    screenshots: [
+      { src: '/apps/ritmio/screen-1.png', alt: "Ritmio today view with the day's habits ready to check off" },
+      { src: '/apps/ritmio/screen-2.png', alt: 'Ritmio statistics screen showing completion trends over time' },
+      { src: '/apps/ritmio/screen-3.png', alt: 'Ritmio streaks and achievements tracking long-term consistency' },
+    ],
+    faq: [
+      {
+        question: 'Is Ritmio free?',
+        answer:
+          'Yes — track up to five habits for free, with no time limit. Premium unlocks unlimited habits and full statistics at $4.99 a month or $49.99 a year.',
+      },
+      {
+        question: 'Does it work offline?',
+        answer:
+          'Yes. Ritmio works fully offline and syncs across your devices once you reconnect, so a poor signal never costs you a check-in.',
+      },
+      {
+        question: 'Is there an Android version?',
+        answer:
+          'Not yet. Ritmio runs on iPhone and iPad, and requires iOS 15.6 or later. Subscribe to the newsletter to hear if that changes.',
+      },
+      {
+        question: 'Can I get my data out?',
+        answer:
+          'Yes. You can export your data or delete your account at any time. Nothing is locked in.',
+      },
+    ],
+  },
 ];
 
 /** Look up a single app by its URL slug. */
