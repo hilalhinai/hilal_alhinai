@@ -20,7 +20,23 @@ function readPostFiles(): string[] {
   return fs.readdirSync(POSTS_DIR).filter((f) => f.endsWith('.mdx'));
 }
 
-/** All published posts, newest first. Drafts are shown only in development. */
+/**
+ * A post is publicly visible when it is not a draft AND its publish date has
+ * arrived. This lets posts be scheduled in advance: set `draft: false` and a
+ * future `date`, and the post appears automatically on that day (pages use ISR
+ * revalidation, so no redeploy is needed). Date comparison uses YYYY-MM-DD
+ * strings in UTC to avoid timezone edge cases around midnight.
+ */
+function isPublished(post: { draft?: boolean; date: string }): boolean {
+  if (post.draft) return false;
+  const today = new Date().toISOString().slice(0, 10);
+  return String(post.date).slice(0, 10) <= today;
+}
+
+/**
+ * All published posts, newest first. In development every post is shown —
+ * including drafts and future-dated posts — so they can be previewed locally.
+ */
 export function getAllPosts(): Post[] {
   return readPostFiles()
     .map((file) => {
@@ -34,7 +50,7 @@ export function getAllPosts(): Post[] {
         readingMinutes: readingTime(content),
       } satisfies Post;
     })
-    .filter((post) => process.env.NODE_ENV === 'development' || !post.draft)
+    .filter((post) => process.env.NODE_ENV === 'development' || isPublished(post))
     .sort((a, b) => +new Date(b.date) - +new Date(a.date));
 }
 

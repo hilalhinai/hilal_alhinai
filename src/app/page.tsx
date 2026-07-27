@@ -11,6 +11,9 @@ import { Button } from '@/components/ui/Button';
 import { Reveal } from '@/components/ui/Reveal';
 import { PostCard } from '@/components/blog/PostCard';
 
+// Re-check hourly so a newly scheduled post shows in the homepage list on time.
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
 };

@@ -16,6 +16,9 @@ import { ArticleSchema, BreadcrumbSchema } from '@/components/seo/JsonLd';
 
 type Params = { params: Promise<{ slug: string }> };
 
+// Re-check hourly so a scheduled post's page goes live on its publish day.
+export const revalidate = 3600;
+
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
 }

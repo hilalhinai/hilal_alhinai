@@ -3,6 +3,9 @@ import { apps } from '@/lib/apps';
 import { getAllPosts } from '@/lib/posts';
 import { siteConfig } from '@/lib/site';
 
+// Re-check hourly so scheduled posts enter the sitemap on their publish day.
+export const revalidate = 3600;
+
 /** Generated from the app catalogue and blog content — no manual upkeep. */
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [

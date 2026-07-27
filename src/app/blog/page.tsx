@@ -8,6 +8,10 @@ import { BlogExplorer } from '@/components/blog/BlogExplorer';
 import { Newsletter } from '@/components/home/Newsletter';
 import { BreadcrumbSchema } from '@/components/seo/JsonLd';
 
+// Re-check hourly so date-scheduled posts appear on their publish day
+// without needing a redeploy.
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: 'Blog',
   description:
