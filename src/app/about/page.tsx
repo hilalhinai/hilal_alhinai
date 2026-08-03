@@ -56,15 +56,15 @@ const roles = [
 const timeline = [
   {
     year: 'Now',
-    title: 'Mira is live',
+    title: 'Three apps live',
     detail:
-      'Growing Mira, listening to what people actually use, and writing about the process as it happens.',
+      'Mira, Ritmio and Renavo are all in the App Store. Growing them, listening to what people actually use, and writing about the process as it happens.',
   },
   {
     year: '2026',
     title: 'First app in the store',
     detail:
-      'Mira: Money & Mood launched on iPhone and iPad, with real users, real feedback and a lot of rewriting.',
+      'Mira: Money & Mood launched on iPhone and iPad, with real users, real feedback and a lot of rewriting. Ritmio and Renavo followed the same year.',
   },
   {
     year: '2024',

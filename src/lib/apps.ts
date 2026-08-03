@@ -262,6 +262,104 @@ export const apps: App[] = [
       },
     ],
   },
+  {
+    slug: 'renavo',
+    name: 'Renavo',
+    tagline: 'Track service, fuel and costs.',
+    description:
+      'Your car\'s full history in one app — services, fuel, expenses, documents and renewal reminders, with a health score at a glance.',
+    longDescription:
+      'Renavo keeps your car\'s whole history in one place — services, fuel, expenses, reminders and documents — so you always know what has been done and what is coming up. Log a service in seconds, track every fill-up, attach the invoice, and let Renavo remind you before the next oil change, insurance renewal or registration is due. A simple health score tells you your car\'s status at a glance, and one app covers the whole garage.',
+    status: 'live',
+    category: 'Utilities',
+    icon: '/apps/renavo/icon.png',
+    gradient: 'from-sky-500/20 via-blue-500/10 to-transparent',
+    featured: true,
+    releaseDate: '2026-07-27',
+    platforms: ['ios', 'ipados'],
+    pricing: 'Free · In-App Purchases',
+    links: {
+      appStore: 'https://apps.apple.com/app/renavo/id6790155156',
+      website: '/apps/renavo',
+      support: '/contact',
+    },
+    benefits: [
+      {
+        title: 'One home for the whole history',
+        description:
+          'Services, fuel, expenses and documents live together, so nothing is scattered across glove-box receipts and half-remembered dates.',
+      },
+      {
+        title: 'Never miss a renewal',
+        description:
+          'Smart reminders by date or mileage warn you before the next service, insurance renewal or registration — the deadlines that get expensive when missed.',
+      },
+      {
+        title: 'Know what the car really costs',
+        description:
+          'Fuel, servicing and expenses add up to monthly and average figures, and a health score turns it all into a status you can read in a second.',
+      },
+    ],
+    features: [
+      {
+        title: 'Service history',
+        description: 'Log every service with date, mileage, cost, workshop and notes — invoices attached.',
+        icon: 'Wrench',
+      },
+      {
+        title: 'Fuel tracking',
+        description: 'Record every fill-up and watch your spending and consumption over time.',
+        icon: 'Fuel',
+      },
+      {
+        title: 'Expenses & costs',
+        description: 'Capture all car expenses and see monthly and average costs at a glance.',
+        icon: 'Receipt',
+      },
+      {
+        title: 'Smart reminders',
+        description: 'Set reminders by date or mileage, with notifications before anything falls due.',
+        icon: 'BellRing',
+      },
+      {
+        title: 'Document storage',
+        description: 'Keep insurance, registration, invoices and photos safely in one place.',
+        icon: 'FolderLock',
+      },
+      {
+        title: 'Multiple vehicles',
+        description: 'Manage a whole garage from one app, with instant search across every record.',
+        icon: 'Car',
+      },
+    ],
+    screenshots: [
+      { src: '/apps/renavo/screen-1.png', alt: 'Renavo dashboard showing a car health score and upcoming alerts' },
+      { src: '/apps/renavo/screen-2.png', alt: 'Renavo service history with dates, mileage, cost and attached invoices' },
+      { src: '/apps/renavo/screen-3.png', alt: 'Renavo fuel and expense tracking with monthly and average costs' },
+    ],
+    faq: [
+      {
+        question: 'Is Renavo free?',
+        answer:
+          'Yes. The free version covers service history, fuel, expenses, reminders and documents. Premium adds unlimited vehicles, advanced statistics and charts, PDF/Excel/CSV export and unlimited reminders — $2.99 a month or $19.99 a year.',
+      },
+      {
+        question: 'Do I need an account?',
+        answer:
+          'No. Your data is stored locally on your device and you can start in guest mode. If you want to sign in, you can use email, Google or Apple.',
+      },
+      {
+        question: 'Can it handle more than one car?',
+        answer:
+          'Yes. You can manage multiple vehicles, and Premium removes the limit so a whole garage lives in one app.',
+      },
+      {
+        question: 'Is there an Android version?',
+        answer:
+          'Not yet. Renavo runs on iPhone and iPad, and requires iOS 15 or later. Subscribe to the newsletter to hear if that changes.',
+      },
+    ],
+  },
 ];
 
 /** Look up a single app by its URL slug. */
