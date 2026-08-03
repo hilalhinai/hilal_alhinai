@@ -8,6 +8,7 @@ export const categories = [
   { slug: 'app-development', label: 'App Development' },
   { slug: 'productivity', label: 'Productivity' },
   { slug: 'personal-finance', label: 'Personal Finance' },
+  { slug: 'car-maintenance', label: 'Car Maintenance' },
   { slug: 'building-in-public', label: 'Building in Public' },
   { slug: 'technology', label: 'Technology' },
 ] as const;
