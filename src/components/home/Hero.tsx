@@ -3,13 +3,14 @@
 import Image from 'next/image';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
-import { getFeaturedApps } from '@/lib/apps';
+import { apps, getFeaturedApps } from '@/lib/apps';
 import { siteConfig } from '@/lib/site';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
 import { PhoneMockup } from '@/components/apps/PhoneMockup';
 
 const featured = getFeaturedApps();
+const liveCount = apps.filter((app) => app.status === 'live').length;
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -64,7 +65,10 @@ export function Hero() {
 
             <motion.dl {...item(0.32)} className="mt-12 flex flex-wrap gap-x-10 gap-y-5">
               {[
-                { value: '1', label: 'App on the App Store' },
+                {
+                  value: String(liveCount),
+                  label: liveCount === 1 ? 'App on the App Store' : 'Apps on the App Store',
+                },
                 { value: 'iOS', label: 'iPhone & iPad' },
                 { value: '100%', label: 'Independent' },
               ].map((stat) => (
