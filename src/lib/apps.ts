@@ -360,6 +360,104 @@ export const apps: App[] = [
       },
     ],
   },
+  {
+    slug: 'warvo',
+    name: 'Warvo',
+    tagline: 'Receipt & warranty vault.',
+    description:
+      'Scan a receipt in seconds and never lose a warranty, return or repair claim again — with a dashboard showing what is active, expiring or expired.',
+    longDescription:
+      'Warvo is the simplest way to keep every receipt safe, so you are always ready for a return, repair, exchange or warranty claim. Point the camera and it detects the edges, crops and enhances the photo, then reads the merchant, date, total and receipt number for you — you just confirm what you bought and pick a warranty length. A colour-coded dashboard shows what is active, expiring soon or expired, and instant search finds any receipt as fast as you type. No accounts, no clutter, and private on your device by default.',
+    status: 'live',
+    category: 'Utilities',
+    icon: '/apps/warvo/icon.png',
+    gradient: 'from-amber-500/20 via-orange-500/10 to-transparent',
+    featured: true,
+    releaseDate: '2026-08-03',
+    platforms: ['ios', 'ipados'],
+    pricing: 'Free · In-App Purchases',
+    links: {
+      appStore: 'https://apps.apple.com/app/warvo/id6794998377',
+      website: '/apps/warvo',
+      support: '/contact',
+    },
+    benefits: [
+      {
+        title: 'Never lose proof of purchase',
+        description:
+          'Every receipt is scanned and stored the moment you buy, so the one you need for a return or claim is always there — not lost in a drawer or a photo roll.',
+      },
+      {
+        title: 'Know what is still covered',
+        description:
+          'A colour-coded dashboard shows active, expiring-soon and expired warranties at a glance, so you claim while you still can.',
+      },
+      {
+        title: 'Private by default',
+        description:
+          'Your receipts live on your device. Optional Cloud Sync backs them up and shares them across your devices only if you turn it on.',
+      },
+    ],
+    features: [
+      {
+        title: 'Scan in seconds',
+        description: 'Point and capture — on-device scanning crops, enhances and reads the details automatically.',
+        icon: 'ScanLine',
+      },
+      {
+        title: 'Warranty dashboard',
+        description: 'A clean, colour-coded overview of active, expiring-soon and expired warranties. Tap to filter.',
+        icon: 'LayoutDashboard',
+      },
+      {
+        title: 'Instant search',
+        description: 'Search across product names, merchants, receipt numbers and notes as fast as you type.',
+        icon: 'Search',
+      },
+      {
+        title: 'Warranty reminders',
+        description: 'Premium nudges at 30 days, 7 days and on expiry, so a deadline never slips past.',
+        icon: 'BellRing',
+      },
+      {
+        title: 'PDF export',
+        description: 'Export a receipt to PDF for claims and returns, ready to send in seconds.',
+        icon: 'FileText',
+      },
+      {
+        title: 'Private by design',
+        description: 'Stored on your device, with optional Cloud Sync for backup and access across devices.',
+        icon: 'ShieldCheck',
+      },
+    ],
+    screenshots: [
+      { src: '/apps/warvo/screen-1.png', alt: 'Warvo warranty dashboard showing active, expiring and expired coverage' },
+      { src: '/apps/warvo/screen-2.png', alt: 'Warvo scanning a receipt and reading the details automatically' },
+      { src: '/apps/warvo/screen-3.png', alt: 'Warvo instant search across products, merchants and receipt numbers' },
+    ],
+    faq: [
+      {
+        question: 'Is Warvo free?',
+        answer:
+          'Yes. The free version scans and stores receipts, tracks warranties and includes search. Premium removes ads and adds warranty reminders, PDF export and backup & restore — $0.99 a month, $9.99 a year, or a $29.99 one-time lifetime purchase.',
+      },
+      {
+        question: 'Do I need an account?',
+        answer:
+          'No. Warvo works with no account and stores your receipts on your device. Turn on optional Cloud Sync if you want them backed up and available on your other devices.',
+      },
+      {
+        question: 'How does scanning work?',
+        answer:
+          'Scanning and text recognition run on your device. Warvo detects the receipt edges, crops and enhances the image, then reads the merchant, date, total and receipt number for you to confirm.',
+      },
+      {
+        question: 'Is there an Android version?',
+        answer:
+          'Not yet. Warvo runs on iPhone and iPad, and requires iOS 15.5 or later. Subscribe to the newsletter to hear if that changes.',
+      },
+    ],
+  },
 ];
 
 /** Look up a single app by its URL slug. */

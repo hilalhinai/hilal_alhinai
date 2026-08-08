@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { apps, getFeaturedApps } from '@/lib/apps';
@@ -12,8 +13,26 @@ import { PhoneMockup } from '@/components/apps/PhoneMockup';
 const featured = getFeaturedApps();
 const liveCount = apps.filter((app) => app.status === 'live').length;
 
+/** How many phones the device cluster shows. */
+const CLUSTER_SIZE = 3;
+
 export function Hero() {
   const reduce = useReducedMotion();
+
+  // Render a stable set on the server / first paint to avoid a hydration
+  // mismatch, then pick a random set after mount so revisits can show
+  // different apps in the floating cluster.
+  const [cluster, setCluster] = useState(() => featured.slice(0, CLUSTER_SIZE));
+
+  useEffect(() => {
+    if (featured.length <= CLUSTER_SIZE) return; // nothing to rotate
+    const shuffled = [...featured];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    setCluster(shuffled.slice(0, CLUSTER_SIZE));
+  }, []);
 
   const item = (delay: number) => ({
     initial: reduce ? false : { opacity: 0, y: 18 },
@@ -88,7 +107,7 @@ export function Hero() {
             className="relative mx-auto flex w-full max-w-md items-end justify-center gap-4 sm:gap-6"
             aria-hidden
           >
-            {featured.slice(0, 3).map((app, i) => (
+            {cluster.map((app, i) => (
               <motion.div
                 key={app.slug}
                 className="flex-1"
