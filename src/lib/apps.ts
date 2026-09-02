@@ -458,6 +458,104 @@ export const apps: App[] = [
       },
     ],
   },
+  {
+    slug: 'sticks-and-squares',
+    name: 'Sticks & Squares',
+    tagline: 'Roll, race & capture online.',
+    description:
+      'A fast, friendly board game of racing, luck and capture — play online with friends, pass-and-play, or against the computer. No ads, no login.',
+    longDescription:
+      'Sticks & Squares is a fast, friendly board game of racing, luck and capture, inspired by classics like Ludo and Jackaroo. Roll the sticks, move your pieces around the board, and be the first to bring them all home — land on an opponent and send them back to the start. Play pass-and-play on one device, take on a smart computer opponent, or start an online room and share a 6-character code with a friend. Simple to learn, tense to the finish, and free of ads and sign-ups.',
+    status: 'live',
+    category: 'Board Game',
+    icon: '/apps/sticks-and-squares/icon.png',
+    gradient: 'from-rose-500/20 via-pink-500/10 to-transparent',
+    featured: true,
+    releaseDate: '2026-08-25',
+    platforms: ['ios', 'ipados'],
+    pricing: 'Free',
+    links: {
+      appStore: 'https://apps.apple.com/app/sticks-squares/id6785944388',
+      website: '/apps/sticks-and-squares',
+      support: '/contact',
+    },
+    benefits: [
+      {
+        title: 'Play together, anywhere',
+        description:
+          'Pass-and-play on one device, an online room with a shared code, or a smart computer opponent — 2 or 4 players, with optional teams.',
+      },
+      {
+        title: 'Simple to learn, tense to finish',
+        description:
+          'Roll, race your pieces home, and capture opponents to send them back. Easy to pick up, hard to put down.',
+      },
+      {
+        title: 'No ads, no login',
+        description:
+          'No sign-up and no advertising. Your profile, stats and achievements live on your device.',
+      },
+    ],
+    features: [
+      {
+        title: 'Pass-and-play offline',
+        description: 'Share one device with 2 or 4 players — no connection needed.',
+        icon: 'Users',
+      },
+      {
+        title: 'Play the computer',
+        description: 'Take on a smart AI opponent whenever you want a solo game.',
+        icon: 'Cpu',
+      },
+      {
+        title: 'Online multiplayer',
+        description: 'Create a room, share a 6-character code, and play with a friend anywhere.',
+        icon: 'Globe',
+      },
+      {
+        title: 'In-game chat',
+        description: 'Send messages and quick emoji reactions, with report and block built in.',
+        icon: 'MessageCircle',
+      },
+      {
+        title: 'Six board themes',
+        description: 'Classic, Wood, Dark, Ocean, Royal and Forest — plus avatars and colours.',
+        icon: 'Palette',
+      },
+      {
+        title: 'Level up',
+        description: 'Track stats, earn XP, unlock achievements and keep a daily-reward streak.',
+        icon: 'Trophy',
+      },
+    ],
+    screenshots: [
+      { src: '/apps/sticks-and-squares/screen-1.png', alt: 'Sticks & Squares board mid-game with pieces racing home' },
+      { src: '/apps/sticks-and-squares/screen-2.png', alt: 'Online multiplayer room with a shared code and in-game chat' },
+      { src: '/apps/sticks-and-squares/screen-3.png', alt: 'Board themes, profile and achievements in Sticks & Squares' },
+    ],
+    faq: [
+      {
+        question: 'Is Sticks & Squares free?',
+        answer:
+          'Yes — completely free, with no ads and no in-app purchases.',
+      },
+      {
+        question: 'Can I play online with a friend?',
+        answer:
+          'Yes. Create a room and share the 6-character code. Games support 2 or 4 players, with an optional team mode for four.',
+      },
+      {
+        question: 'Can I play offline or against the computer?',
+        answer:
+          'Both. Pass-and-play with 2 or 4 players on one device, or play against a smart computer opponent.',
+      },
+      {
+        question: 'Do I need an account?',
+        answer:
+          'No. There is no sign-up — your profile, avatar, stats and achievements are stored on your device.',
+      },
+    ],
+  },
 ];
 
 /** Look up a single app by its URL slug. */
