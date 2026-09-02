@@ -35,6 +35,8 @@ export interface App {
   /** Longer copy shown on the individual app page hero. */
   longDescription: string;
   status: AppStatus;
+  /** Groups the catalogue into Apps vs Games. Defaults to 'app'. */
+  kind?: 'app' | 'game';
   category: string;
   /** Emoji or path to an icon asset — used in cards and hero. */
   icon: string;
@@ -461,6 +463,7 @@ export const apps: App[] = [
   {
     slug: 'sticks-and-squares',
     name: 'Sticks & Squares',
+    kind: 'game',
     tagline: 'Roll, race & capture online.',
     description:
       'A fast, friendly board game of racing, luck and capture — play online with friends, pass-and-play, or against the computer. No ads, no login.',
@@ -561,6 +564,16 @@ export const apps: App[] = [
 /** Look up a single app by its URL slug. */
 export function getApp(slug: string): App | undefined {
   return apps.find((app) => app.slug === slug);
+}
+
+/** Non-game apps, in catalogue order. */
+export function getApps(): App[] {
+  return apps.filter((app) => (app.kind ?? 'app') === 'app');
+}
+
+/** Games, in catalogue order. */
+export function getGames(): App[] {
+  return apps.filter((app) => app.kind === 'game');
 }
 
 /** Apps highlighted on the home page. */

@@ -36,8 +36,12 @@ export function Navbar() {
     };
   }, [open]);
 
-  const isActive = (href: string) =>
-    href === '/' ? pathname === '/' : pathname.startsWith(href);
+  const isActive = (href: string) => {
+    // Hash links (e.g. /apps#games) are in-page jumps — never treat them as the
+    // active route, so they don't fight the real page link for the nav pill.
+    if (href.includes('#')) return false;
+    return href === '/' ? pathname === '/' : pathname.startsWith(href);
+  };
 
   return (
     <header

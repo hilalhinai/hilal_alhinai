@@ -1,22 +1,22 @@
 import type { Metadata } from 'next';
-import { apps } from '@/lib/apps';
+import { getApps, getGames } from '@/lib/apps';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
 import { Reveal } from '@/components/ui/Reveal';
 import { Badge } from '@/components/ui/Badge';
+import { SectionHeading } from '@/components/ui/SectionHeading';
 import { AppCard, FutureAppCard } from '@/components/apps/AppCard';
 import { Newsletter } from '@/components/home/Newsletter';
 import { BreadcrumbSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Apps',
+  title: 'Apps & Games',
   description:
-    'Mira: Money & Mood — a mindful budgeting and mood tracker for iPhone and iPad, built independently.',
+    'Practical iPhone and iPad apps and games, built independently by Hilal — budgeting, habits, car maintenance, receipts, and a board game.',
   alternates: { canonical: '/apps' },
   openGraph: {
-    title: 'Apps by Hilal — practical mobile apps',
-    description:
-      'Mira: Money & Mood — practical apps that solve everyday problems.',
+    title: 'Apps & Games by Hilal',
+    description: 'Practical apps and games that solve everyday problems — or are simply fun.',
     url: '/apps',
   },
 };
@@ -48,13 +48,25 @@ export default function AppsPage() {
       </section>
 
       <Section>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {apps.map((app, i) => (
+        <SectionHeading eyebrow="Apps" title="Tools for everyday problems" />
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {getApps().map((app, i) => (
             <AppCard key={app.slug} app={app} index={i} />
           ))}
-          <FutureAppCard index={apps.length} />
+          <FutureAppCard index={getApps().length} />
         </div>
       </Section>
+
+      {getGames().length > 0 && (
+        <Section id="games" className="scroll-mt-24 border-t border-border">
+          <SectionHeading eyebrow="Games" title="Made for fun" />
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {getGames().map((game, i) => (
+              <AppCard key={game.slug} app={game} index={i} />
+            ))}
+          </div>
+        </Section>
+      )}
 
       <Newsletter />
     </>

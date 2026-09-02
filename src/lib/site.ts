@@ -42,6 +42,7 @@ export const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/apps', label: 'Apps' },
+  { href: '/apps#games', label: 'Games' },
   { href: '/blog', label: 'Blog' },
   { href: '/now', label: 'Now' },
   { href: '/contact', label: 'Contact' },
