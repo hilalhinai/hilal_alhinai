@@ -559,6 +559,105 @@ export const apps: App[] = [
       },
     ],
   },
+  {
+    slug: 'okey',
+    name: 'Okey — Rummy Tile Game',
+    kind: 'game',
+    tagline: 'The Turkish classic, online.',
+    description:
+      'The classic Okey tile game built for your phone — draw, build runs and sets, and empty your rack first. Play three computer opponents or friends online. No accounts, no ads.',
+    longDescription:
+      'Okey is the classic tile game, built for your phone. Draw a tile, build runs and sets, and be the first to empty your rack — tiles already on the table are fair game, so take them apart and rebuild them as long as everything is valid when your turn ends. Play three computer opponents offline whenever you like, or create a room, share a six-character code, and play with up to three friends, each on their own device. Step away mid-game — lock your phone or switch apps — and your seat and tiles are waiting when you return.',
+    status: 'live',
+    category: 'Board Game',
+    icon: '/apps/okey/icon.png',
+    gradient: 'from-red-500/20 via-rose-500/10 to-transparent',
+    featured: true,
+    releaseDate: '2026-09-08',
+    platforms: ['ios', 'ipados'],
+    pricing: 'Free',
+    links: {
+      appStore: 'https://apps.apple.com/app/okey-rummy-game/id6803854398',
+      website: '/apps/okey',
+      support: '/contact',
+    },
+    benefits: [
+      {
+        title: 'Play anytime, on your own',
+        description:
+          'Three computer opponents ready whenever you are — no internet needed for a quick game.',
+      },
+      {
+        title: 'Or online with friends',
+        description:
+          'Create a room, share a six-character code, and play with up to three friends, each on their own device.',
+      },
+      {
+        title: 'Pick up and put down',
+        description:
+          'Lock your phone or switch apps mid-game — your seat and your tiles are waiting when you come back.',
+      },
+    ],
+    features: [
+      {
+        title: 'Three AI opponents',
+        description: 'A full table offline, ready whenever you are — no connection required.',
+        icon: 'Cpu',
+      },
+      {
+        title: 'Online rooms',
+        description: 'Two, three or four players, each on their own device, all seeing the same table.',
+        icon: 'Globe',
+      },
+      {
+        title: 'Easy on the eye',
+        description: 'Large, clear tiles, and every colour carries its own shape for colour-blind play.',
+        icon: 'Eye',
+      },
+      {
+        title: 'Arrange your way',
+        description: 'Drag tiles to reorder your rack, or sort by colour or number with one tap.',
+        icon: 'LayoutGrid',
+      },
+      {
+        title: 'Hint when stuck',
+        description: 'A hint button surfaces a move when you cannot find one yourself.',
+        icon: 'Lightbulb',
+      },
+      {
+        title: 'Resume anytime',
+        description: 'Close the app or lock your phone mid-game and return to your seat and tiles.',
+        icon: 'RotateCcw',
+      },
+    ],
+    screenshots: [
+      { src: '/apps/okey/screen-1.png', alt: 'Okey table with a rack of tiles arranged into runs and sets' },
+      { src: '/apps/okey/screen-2.png', alt: 'Okey online room with a six-character code to play with friends' },
+      { src: '/apps/okey/screen-3.png', alt: 'Okey tiles showing colour and shape together for accessible play' },
+    ],
+    faq: [
+      {
+        question: 'Is Okey free?',
+        answer:
+          'Yes — completely free, with no ads, no purchases and no tracking.',
+      },
+      {
+        question: 'Can I play online with friends?',
+        answer:
+          'Yes. Create a room and share the six-character code to play with up to three friends, each on their own device.',
+      },
+      {
+        question: 'Can I play offline?',
+        answer:
+          'Yes. Three computer opponents are ready whenever you are, with no internet needed.',
+      },
+      {
+        question: 'How do you play Okey?',
+        answer:
+          'From 106 tiles — numbers 1 to 13 in four colours, twice over, plus two jokers — everyone starts with 14. Build runs (three or more of the same colour in a row) and sets (the same number in different colours), draw when you cannot lay anything down, and win by emptying your rack first.',
+      },
+    ],
+  },
 ];
 
 /** Look up a single app by its URL slug. */
